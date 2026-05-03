@@ -1,5 +1,4 @@
 # baseURL = "https://your_domain.com/"
-languageCode = "en"
 defaultContentLanguage = "en"
 
 title = "Lynx"
