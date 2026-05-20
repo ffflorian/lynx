@@ -7,7 +7,7 @@ Lynx is designed to be a simple links page powered by [Hugo](https://gohugo.io).
 🐛 [Bug reports & issues](https://github.com/ffflorian/lynx/issues)
 💡 [Questions & feature requests](https://github.com/ffflorian/lynx/discussions)
 
-![Screenshot](https://raw.githubusercontent.com/ffflorian/lynx/stable/images/screenshot.png)
+![Screenshot](./images/screenshot.png)
 
 ## Features
 
