@@ -2,7 +2,7 @@
 title: Link styles
 ---
 
-These are all the built-in link styles available in Lynx. Don't forget that you can also create your own styles --- check the [readme](https://github.com/jpanther/lynx/blob/stable/README.md) for more details.
+These are all the built-in link styles available in Lynx. Don't forget that you can also create your own styles --- check the [readme](https://github.com/ffflorian/lynx/blob/stable/README.md) for more details.
 <br><br>
 
 </section>

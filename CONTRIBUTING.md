@@ -4,8 +4,8 @@
 
 #### Found a bug? 🐛
 
-- **Ensure the bug has not already been reported** by searching [GitHub Issues](https://github.com/jpanther/lynx/issues). If there's already an open issue, feel free to add any extra information you might have about the issue.
-- If you're unable to find an open issue matching the problem, [open a new one](https://github.com/jpanther/lynx/issues/new). Be sure to include a **title and clear description**, as much relevant information as possible, and a **code sample**, **screenshot**, or a **test case** demonstrating the expected behavior that is not occurring.
+- **Ensure the bug has not already been reported** by searching [GitHub Issues](https://github.com/ffflorian/lynx/issues). If there's already an open issue, feel free to add any extra information you might have about the issue.
+- If you're unable to find an open issue matching the problem, [open a new one](https://github.com/ffflorian/lynx/issues/new). Be sure to include a **title and clear description**, as much relevant information as possible, and a **code sample**, **screenshot**, or a **test case** demonstrating the expected behavior that is not occurring.
 - Where possible, use the bug report templates to create the issue. Avoid including descriptions like "bug", "feature", etc in the issue title as these will be handled by labels.
 
 #### Have a patch that fixes an issue?
@@ -20,15 +20,15 @@
 
 #### Do you intend to add a new feature, or change an existing one?
 
-- Enhancements are welcome but before implementing any features, be sure to suggest your change by opening a [new discussion](https://github.com/jpanther/lynx/discussions/new) about your idea. Enhancements are discussed to ensure they fit with the project's design intent and overall roadmap.
-- Before opening a discussion, [check to see](https://github.com/jpanther/lynx/discussions/categories/ideas) if a similar idea is already being discussed.
+- Enhancements are welcome but before implementing any features, be sure to suggest your change by opening a [new discussion](https://github.com/ffflorian/lynx/discussions/new) about your idea. Enhancements are discussed to ensure they fit with the project's design intent and overall roadmap.
+- Before opening a discussion, [check to see](https://github.com/ffflorian/lynx/discussions/categories/ideas) if a similar idea is already being discussed.
 - All ideas and suggestions are welcome and will be judged on their merits.
 - If the community supports your idea, go ahead and submit a PR with the implemented feature.
 
 ### Questions? 🙋‍♀️
 
-- If you have a general question, these should be asked using [GitHub Discussions](https://github.com/jpanther/lynx/discussions). Feel free to open a [new discussion](https://github.com/jpanther/lynx/discussions/new) to ask your question using the "Q&A" category.
-- Be sure to check if your question has already been answered by searching [existing Q&A discussions](https://github.com/jpanther/lynx/discussions/categories/q-a).
+- If you have a general question, these should be asked using [GitHub Discussions](https://github.com/ffflorian/lynx/discussions). Feel free to open a [new discussion](https://github.com/ffflorian/lynx/discussions/new) to ask your question using the "Q&A" category.
+- Be sure to check if your question has already been answered by searching [existing Q&A discussions](https://github.com/ffflorian/lynx/discussions/categories/q-a).
 
 ### Coding conventions
 
