@@ -1,6 +1,6 @@
 # Lynx
 
-### This is a fork of the original [Lynx](https://github.com/ffflorian/lynx) theme because a [pull request](https://github.com/ffflorian/lynx/pull/174) required for Hugo >= 0.146.0 is still open.
+### This is a fork of the original [Lynx](https://github.com/ffflorian/lynx) theme because a [pull request](https://github.com/jpanther/lynx/pull/174) required for Hugo >= 0.146.0 is still open.
 
 Lynx is designed to be a simple links page powered by [Hugo](https://gohugo.io). It's built using Tailwind CSS and inspired by services like LinkTree.
 
