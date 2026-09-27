@@ -1,4 +1,14 @@
-<span class="icon relative inline-block align-text-bottom">
+{{/* Usage: {{< icon "github" >}} (decorative) or {{< icon "github" "GitHub" >}} (with alt text)
+*/}}
+{{ $alt := $.Get 1 }}
+<span
+  class="icon relative inline-block align-text-bottom"
+  {{ with $alt }}
+    role="img" aria-label="{{ . }}"
+  {{ else }}
+    aria-hidden="true"
+  {{ end }}
+>
   {{ $icon := resources.Get (printf "icons/%s.svg" ($.Get 0)) }}
   {{ if $icon }}
     {{ $icon.Content | safeHTML }}

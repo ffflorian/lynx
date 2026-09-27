@@ -1,6 +1,7 @@
+{{/* Icons are decorative: the surrounding text already names the link. */}}
 {{ $icon := resources.Get (print "icons/" . ".svg") }}
 {{ if $icon }}
-  <span class="icon relative inline-block align-text-bottom">
+  <span class="icon relative inline-block align-text-bottom" aria-hidden="true">
     {{ $icon.Content | safeHTML }}
   </span>
 {{ end }}

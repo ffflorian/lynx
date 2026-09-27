@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- `imageAlt` author parameter to set the alt text of the author image
+- `label` link parameter to set an accessible name for a link
+- Optional alt text argument for the `icon` shortcode
+- Skip to content link, visible keyboard focus indicator and screen reader announcement for links that open in a new tab
+
+### Changed
+
+- Links are now rendered as a labelled list inside a `nav` element
+- Icons are hidden from screen readers
+- Author headline is no longer a heading element
+
+### Fixed
+
+- `rel="me"` links in the page head for links defined with parameters
+
 ## [1.4.0] - 2024-05-01
 
 ### Added
