@@ -48,3 +48,9 @@ link:
 
 footer:
   powered_by: "Propulsé par {{ .Hugo }} &amp; {{ .Lynx }}"
+
+a11y:
+  breadcrumb: Fil d’Ariane
+  links: Liens
+  new_tab: s’ouvre dans un nouvel onglet
+  skip_to_content: Aller au contenu

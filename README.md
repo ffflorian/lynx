@@ -17,6 +17,7 @@ Lynx is designed to be a simple links page powered by [Hugo](https://gohugo.io).
 - HTML and Emoji support
 - Fathom Analytics and Google Analytics support
 - Favicons support
+- Accessible to screen reader users: alt texts, skip link, list semantics, new-tab announcements and visible keyboard focus
 
 ---
 
@@ -61,6 +62,15 @@ The main theme configuration is managed in the `config.toml` file. Most paramete
 
 The author name and image are displayed at the top of the page. Both are optional and will default to the site title with no image when not provided.
 
+Use `imageAlt` to describe the author image for screen reader users. When it is not set, the author name is used. Set it to an empty string (`imageAlt = ""`) if the image is purely decorative.
+
+```toml
+[params.author]
+  name = "Jane Doe"
+  image = "img/author.jpg"
+  imageAlt = "Jane Doe smiling in front of a bookshelf"
+```
+
 Links can either be a simple string containing the URL for the link, or an object that defines the link parameters. Links are displayed in the order provided in the config file.
 
 Acceptable link parameters are:
@@ -70,6 +80,9 @@ Acceptable link parameters are:
 - `text` = the link text
 - `target` = the target of the link (default: `_blank`)
 - `title` = the HTML title of the link
+- `label` = an accessible name for screen readers (`aria-label`), used instead of the link text. It should include the visible link text, e.g. `label = "My projects on GitHub"` for a link with the text `GitHub`.
+
+Icons next to links are decorative and hidden from screen readers. Links that open in a new tab are announced as such to screen reader users.
 
 ```toml
 [params.author]
@@ -83,6 +96,8 @@ links = {
 ```
 
 Additional page content can be provided by creating a Markdown file at `content/_index.md`. The contents of this file will be displayed between the title and links. Check out the exampleSite to see this in practice.
+
+Images in Markdown content get their alt text from the standard Markdown syntax: `![A lynx sitting in the grass](lynx.jpg)`. Icons inserted with the `icon` shortcode are decorative by default; pass a second argument to give them alt text: `{{</* icon "github" "GitHub" */>}}`.
 
 Basic content pages can also be created by placing Markdown files in the `content` directory. These can then be linked to using links in the config file or through the homepage content.
 

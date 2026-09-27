@@ -1275,6 +1275,52 @@ video {
   background-color: #f48024;
 }
 
+/* -- Accessibility -- */
+/* Visually hidden, but still announced by screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Skip link: hidden until focused with the keyboard */
+.skip-link {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 50;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  color: #111827;
+  transform: translateY(-200%);
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* Clearly visible keyboard focus indicator */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #7e22ce;
+  outline-offset: 3px;
+}
+main:focus {
+  outline: none;
+}
+@media (prefers-color-scheme: dark) {
+  a:focus-visible,
+  button:focus-visible {
+    outline-color: #d8b4fe;
+  }
+}
+
 /* -- Chroma Highlight -- */
 
 /* Background */

@@ -11,6 +11,7 @@ disableKinds = ["taxonomy", "term"]
   # name = "Your name here"
   # headline = "An awesome person"
   # image = "img/author.jpg"  # path relative to static directory
+  # imageAlt = "Portrait of your name here, smiling"  # alt text for the image (default: author name, "" = decorative)
 
   links = [
     # { email = "mailto:hello@your_domain.com" },

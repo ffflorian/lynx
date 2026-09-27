@@ -50,3 +50,9 @@ nav:
 
 footer:
   powered_by: "Powered by {{ .Hugo }} &amp; {{ .Lynx }}"
+
+a11y:
+  breadcrumb: Breadcrumb
+  links: Links
+  new_tab: opens in a new tab
+  skip_to_content: Skip to content

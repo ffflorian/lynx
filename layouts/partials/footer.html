@@ -14,9 +14,9 @@
     {{ if .Site.Params.attribution | default true }}
       <p class="text-xs text-neutral-500 dark:text-neutral-400">
         {{ $hugo := printf `<a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
-          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>`
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo<span class="sr-only"> (%s)</span></a>` (i18n "a11y.new_tab")
         }}
-        {{ $lynx := printf `<a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/ffflorian/lynx" target="_blank" rel="noopener noreferrer">Lynx</a>` }}
+        {{ $lynx := printf `<a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/ffflorian/lynx" target="_blank" rel="noopener noreferrer">Lynx<span class="sr-only"> (%s)</span></a>` (i18n "a11y.new_tab") }}
         {{ i18n "footer.powered_by" (dict "Hugo" $hugo "Lynx" $lynx) | safeHTML }}
       </p>
     {{ end }}
