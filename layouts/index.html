@@ -33,7 +33,7 @@
         </p>
       {{ end }}
       {{ with .Content }}
-        <section class="prose pt-5 dark:prose-invert">{{ . | emojify }}</section>
+        <section class="prose dark:prose-invert pt-5">{{ . | emojify }}</section>
       {{ end }}
     </header>
     {{ with .Site.Params.Author.links }}
