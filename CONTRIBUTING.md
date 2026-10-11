@@ -41,7 +41,7 @@
 - Any static text must be referenced using the `i18n` methods and included in the localisation assets.
 - Commit often, preferring incremental changes rather than bundling everything into a single, large commit.
 
-The project includes a Prettier config that helps to format code in line with these guidelines.
+The project includes an oxfmt config (`oxfmt.config.ts`; run `npm run format`) that helps to format code in line with these guidelines.
 
 #### Commit message guidelines
 

@@ -26,7 +26,7 @@ if [ $branch = "dev" ]; then
 
 		# update changelog
 		chan release $version || exit
-		npx prettier --write CHANGELOG.md
+		npx oxfmt CHANGELOG.md
 
 		# build project
 		npm run build

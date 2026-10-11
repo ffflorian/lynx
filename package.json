@@ -6,7 +6,8 @@
     "dev": "NODE_ENV=development ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./assets/css/compiled/main.css --jit -w",
     "build": "NODE_ENV=production ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./assets/css/compiled/main.css --jit",
     "example": "hugo server --source exampleSite --themesDir ../.. --buildDrafts -b http://localhost/lynx/ -p 8008",
-    "lighthouse": "lhci autorun"
+    "lighthouse": "lhci autorun",
+    "format": "oxfmt ."
   },
   "repository": {
     "type": "git",
@@ -25,10 +26,9 @@
   },
   "homepage": "https://github.com/ffflorian/lynx#readme",
   "devDependencies": {
+    "@ffflorian/oxfmt-config": "1.3.0",
     "@tailwindcss/typography": "^0.5.20",
-    "prettier": "^3.9.9",
-    "prettier-plugin-go-template": "^0.0.15",
-    "prettier-plugin-tailwindcss": "^0.8.1",
+    "oxfmt": "0.72.0",
     "tailwindcss": "^4.3.3"
   }
 }
