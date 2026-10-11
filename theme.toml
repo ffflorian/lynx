@@ -11,5 +11,5 @@ tags = ["minimal", "responsive", "dark mode", "dark", "light", "tailwind", "pers
 features = ["dark mode", "emoji"]
 
 [author]
-  name = "James Panther"
-  homepage = "https://jamespanther.com/"
+name = "James Panther"
+homepage = "https://jamespanther.com/"

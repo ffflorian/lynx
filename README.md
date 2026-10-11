@@ -4,8 +4,7 @@
 
 Lynx is designed to be a simple links page powered by [Hugo](https://gohugo.io). It's built using Tailwind CSS and inspired by services like LinkTree.
 
-🐛 [Bug reports & issues](https://github.com/ffflorian/lynx/issues)
-💡 [Questions & feature requests](https://github.com/ffflorian/lynx/discussions)
+🐛 [Bug reports & issues](https://github.com/ffflorian/lynx/issues) 💡 [Questions & feature requests](https://github.com/ffflorian/lynx/discussions)
 
 ![Screenshot](./images/screenshot.png)
 
@@ -121,12 +120,7 @@ Let's make a custom link for FontAwesome using the FA flag as the link icon and 
    ```css
    .link-font-awesome {
      background: rgb(131, 58, 180);
-     background: linear-gradient(
-       90deg,
-       rgba(131, 58, 180, 1) 0%,
-       rgba(253, 29, 29, 1) 50%,
-       rgba(252, 176, 69, 1) 100%
-     );
+     background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
    }
    ```
 

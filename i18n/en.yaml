@@ -49,7 +49,7 @@ nav:
   home: Home
 
 footer:
-  powered_by: "Powered by {{ .Hugo }} &amp; {{ .Lynx }}"
+  powered_by: 'Powered by {{ .Hugo }} &amp; {{ .Lynx }}'
 
 a11y:
   breadcrumb: Breadcrumb
