@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - `rel="me"` links in the page head for links defined with parameters
+- Icons sitting lower than the link text, depending on the font
 
 ## [1.4.0] - 2024-05-01
 

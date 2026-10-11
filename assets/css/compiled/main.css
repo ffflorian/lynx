@@ -1079,6 +1079,11 @@ video {
   width: 1em;
 }
 
+/* Center icons on the text, independent of the font's descender */
+.icon {
+  vertical-align: -0.125em;
+}
+
 /* Links */
 
 .link {
