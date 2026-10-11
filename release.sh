@@ -26,7 +26,6 @@ if [ $branch = "dev" ]; then
 
 		# update changelog
 		chan release $version || exit
-		npx oxfmt CHANGELOG.md
 
 		# build project
 		npm run build
