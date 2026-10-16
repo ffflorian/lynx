@@ -4,7 +4,7 @@
 
 Lynx is designed to be a simple links page powered by [Hugo](https://gohugo.io). It's built using Tailwind CSS and inspired by services like LinkTree.
 
-🐛 [Bug reports & issues](https://github.com/ffflorian/lynx/issues) 💡 [Questions & feature requests](https://github.com/ffflorian/lynx/discussions)
+🐛 [Bug reports & issues](https://github.com/ffflorian/lynx/issues) 💡 [Questions & feature requests](https://github.com/ffflorian/lynx/issues)
 
 ![Screenshot](./images/screenshot.png)
 
@@ -145,7 +145,7 @@ Lynx is expected to evolve over time. I intend to keep adding features and makin
 Feel free to get in touch with any issues or suggestions for new features you'd like to see.
 
 - 🐛 **Bug reports & issues:** Use [GitHub Issues](https://github.com/ffflorian/lynx/issues)
-- 💡 **Ideas for new features:** Open a discussion on [GitHub Discussions](https://github.com/ffflorian/lynx/discussions)
-- 🙋‍♀️ **General questions:** Head to [GitHub Discussions](https://github.com/ffflorian/lynx/discussions)
+- 💡 **Ideas for new features:** Open an issue on [GitHub Issues](https://github.com/ffflorian/lynx/issues)
+- 🙋‍♀️ **General questions:** Open an issue on [GitHub Issues](https://github.com/ffflorian/lynx/issues)
 
 If you're able to fix a bug or implement a new feature, I welcome PRs for this purpose. Learn more in the [contributing guidelines](https://github.com/ffflorian/lynx/blob/main/CONTRIBUTING.md).
