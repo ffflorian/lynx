@@ -13,6 +13,7 @@
 - Great! Open a new GitHub pull request with the patch.
 - All development occurs on the `main` branch and new PRs should be forked from here.
 - Install the dependencies with `yarn`. The command `yarn example` can be used to test local changes using the example site.
+- The theme's CSS is compiled with Tailwind CSS into `assets/css/compiled/main.css`, which is committed. Run `yarn dev` while working on templates or styles (or `yarn build` once) and commit the compiled file along with your changes.
 - Ensure the PR description clearly describes the problem and solution. Include the relevant issue number, if applicable.
 - **Before submitting**, check the [coding conventions](#coding-conventions) section below to learn more about coding and commit message expectations.
 
