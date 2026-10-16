@@ -1,4 +1,4 @@
-name: Test Build
+name: Build and Release
 
 permissions: {}
 
@@ -29,3 +29,36 @@ jobs:
       - name: Build
         working-directory: ./exampleSite
         run: hugo --minify --themesDir ../.. --baseURL https://jpanther.github.io/lynx/
+
+  release:
+    name: Publish Release
+    needs: build
+    permissions:
+      contents: write
+      issues: write
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn --immutable
+
+      - name: Publish release to GitHub
+        env:
+          GIT_AUTHOR_NAME: Florian Imdahl
+          GIT_AUTHOR_EMAIL: git@ffflorian.de
+          GIT_COMMITTER_NAME: Florian Imdahl
+          GIT_COMMITTER_EMAIL: git@ffflorian.de
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: yarn release

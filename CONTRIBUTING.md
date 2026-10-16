@@ -11,8 +11,8 @@
 #### Have a patch that fixes an issue?
 
 - Great! Open a new GitHub pull request with the patch.
-- All development occurs on the `dev` branch and new PRs should be forked from here.
-- The command `npm run example` can be used to test local changes using the example site.
+- All development occurs on the `main` branch and new PRs should be forked from here.
+- Install the dependencies with `yarn`. The command `yarn example` can be used to test local changes using the example site.
 - Ensure the PR description clearly describes the problem and solution. Include the relevant issue number, if applicable.
 - **Before submitting**, check the [coding conventions](#coding-conventions) section below to learn more about coding and commit message expectations.
 
@@ -41,11 +41,11 @@
 - Any static text must be referenced using the `i18n` methods and included in the localisation assets.
 - Commit often, preferring incremental changes rather than bundling everything into a single, large commit.
 
-The project includes an oxfmt config (`oxfmt.config.ts`; run `npm run format`) that helps to format code in line with these guidelines.
+The project includes an oxfmt config (`oxfmt.config.ts`; run `yarn format`) that helps to format code in line with these guidelines.
 
 #### Commit message guidelines
 
-- Use [Gitmoji](https://gitmoji.dev) in commit messages to provide context.
+- Use [Conventional Commits](https://www.conventionalcommits.org) (ie. `feat: Add icon`, `fix: Center link icons`). Releases and the changelog are generated from the commit messages with [semantic-release](https://github.com/semantic-release/semantic-release): `fix` triggers a patch release, `feat` a minor release and a `BREAKING CHANGE:` footer a major release. Since Lynx is a Go module, a major release also requires adding the major version suffix to the module path in `go.mod` (ie. `github.com/ffflorian/lynx/v2`).
 - Clearly describe the change with a short summary in the first 72 characters.
 - Place more detailed explanations in paragraphs below the summary, separated by a blank line.
 - Use imperative language (ie. "Fix bug", not "Fixed bug" or "Fixes bug").

@@ -1,0 +1,34 @@
+name: Check for yarn updates
+
+permissions: {}
+
+on:
+  schedule:
+    - cron: '0 5 1 * *'
+      timezone: 'Europe/Berlin'
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/yarn_update.yml'
+  workflow_dispatch:
+
+jobs:
+  yarn-update-check:
+    name: Yarn update check
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+
+      - name: Update yarn
+        uses: ffflorian/actions/yarn-update@8b90b42e4d82d2d73c873e8cb10d04beb8647fde
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git_authorship: 'Florian Imdahl <git@ffflorian.de>'
+          release_cooldown_days: '5'
+          assignees: 'ffflorian'
