@@ -1,6 +1,6 @@
 {
   "name": "hugo-lynx-theme",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Lynx theme for Hugo",
   "scripts": {
     "dev": "tailwindcss -i ./assets/css/main.css -o ./assets/css/compiled/main.css --watch",

@@ -1,3 +1,17 @@
+# [1.5.0](https://github.com/ffflorian/lynx/compare/v1.4.0...v1.5.0) (2026-10-16)
+
+
+### Bug Fixes
+
+* Center link icons vertically on the text ([#24](https://github.com/ffflorian/lynx/issues/24)) ([4b4ca7e](https://github.com/ffflorian/lynx/commit/4b4ca7ea90faf300706feae86857edd0c3f00425))
+* Remove extra spacing between links on narrow screens ([#22](https://github.com/ffflorian/lynx/issues/22)) ([3c19c8a](https://github.com/ffflorian/lynx/commit/3c19c8a9baa24e4bebe4b26c803cd445595658be))
+* Update theme to work with Hugo >= 0.146.0 ([1730e5d](https://github.com/ffflorian/lynx/commit/1730e5d566ffb33d61673b9c9702704356bd6819))
+
+
+### Features
+
+* Add alt texts and improve screen reader accessibility ([#21](https://github.com/ffflorian/lynx/issues/21)) ([14fee5a](https://github.com/ffflorian/lynx/commit/14fee5af9f351c1a2fe3016299992da5845eece2))
+
 ## [1.4.0] - 2024-05-01
 
 ### Added
