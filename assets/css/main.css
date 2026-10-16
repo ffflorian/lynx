@@ -1,211 +1,211 @@
-/*! Lynx v1.4.0 | MIT License | https://github.com/ffflorian/lynx */
+/*! Lynx | MIT License | https://github.com/ffflorian/lynx */
 
-@tailwind base;
-@tailwind components;
+@import 'tailwindcss' source(none);
+@config '../../tailwind.config.js';
 
-/* Scale SVG icons to text size */
-.icon svg {
-  height: 1em;
-  width: 1em;
-}
+@layer components {
+  /* Scale SVG icons to text size */
+  .icon svg {
+    height: 1em;
+    width: 1em;
+  }
 
-/* Center icons on the text, independent of the font's descender */
-.icon {
-  vertical-align: -0.125em;
-}
+  /* Center icons on the text, independent of the font's descender */
+  .icon {
+    vertical-align: -0.125em;
+  }
 
-/* Links */
-.link {
-  @apply bg-primary-700 text-white hover:brightness-90;
-}
+  /* Links */
+  .link {
+    @apply bg-primary-700 text-white hover:brightness-90;
+  }
 
-.link-amazon {
-  @apply text-neutral-900;
-  background-color: #ff9900;
-}
-.link-apple {
-  background-color: #333;
-}
-.link-bandcamp {
-  background-color: #1da0c3;
-}
-.link-bluesky {
-  background: #0084ff;
-  background: linear-gradient(2.35619rad, #5a72fa 0%, #0084ff 100%);
-}
-.link-codepen {
-  background-color: #1e1f26;
-}
-.link-dev {
-  background-color: #0a0a0a;
-}
-.link-discord {
-  background-color: #7289da;
-}
-.link-dribbble {
-  background-color: #ea4c89;
-}
-.link-facebook {
-  background-color: #1877f2;
-}
-.link-flickr {
-  background-color: #ff0184;
-}
-.link-foursquare {
-  background-color: #0732a2;
-}
-.link-github {
-  background-color: #333;
-}
-.link-gitlab {
-  background-color: #554488;
-}
-.link-google {
-  background-color: #4285f4;
-}
-.link-instagram {
-  background-color: #c13584;
-  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-}
-.link-keybase {
-  background-color: #33a0ff;
-}
-.link-kickstarter {
-  @apply text-neutral-900;
-  background-color: #06ce78;
-}
-.link-lastfm {
-  background-color: #d51007;
-}
-.link-linkedin {
-  background-color: #0077b5;
-}
-.link-mastodon {
-  background-color: #6364ff;
-}
-.link-medium {
-  background-color: #00ab6c;
-}
-.link-microsoft {
-  background-color: #08a6f0;
-}
-.link-orcid {
-  background-color: #a6ce39;
-}
-.link-patreon {
-  background-color: #ff434d;
-}
-.link-pinterest {
-  background-color: #e60023;
-}
-.link-reddit {
-  background-color: #ff4500;
-}
-.link-researchgate {
-  background-color: #40ba9c;
-}
-.link-slack {
-  background-color: #4a154b;
-}
-.link-snapchat {
-  @apply text-neutral-900;
-  background-color: #fffc00;
-}
-.link-soundcloud {
-  background-color: #ff8800;
-  background: linear-gradient(120deg, #ff8800, #ff3300);
-}
-.link-spotify {
-  background-color: #1db954;
-}
-.link-steam {
-  background-color: #000;
-}
-.link-telegram {
-  background-color: #25a3e1;
-}
-.link-threads {
-  background-color: #000;
-}
-.link-tiktok {
-  background-color: #fe2d55;
-}
-.link-tumblr {
-  background-color: #001935;
-}
-.link-twitch {
-  background-color: #9146ff;
-}
-.link-twitter {
-  background-color: rgb(63, 136, 222);
-}
-.link-whatsapp {
-  background-color: #45d82c;
-  background: linear-gradient(120deg, #12990b, #45d82c);
-}
-.link-x {
-  background-color: #000;
-}
-.link-youtube {
-  background-color: #ff0000;
-}
-.link-stack-exchange {
-  background-color: #0095ff;
-}
-.link-stack-overflow {
-  background-color: #f48024;
-}
+  .link-amazon {
+    @apply text-neutral-900;
+    background-color: #ff9900;
+  }
+  .link-apple {
+    background-color: #333;
+  }
+  .link-bandcamp {
+    background-color: #1da0c3;
+  }
+  .link-bluesky {
+    background: #0084ff;
+    background: linear-gradient(2.35619rad, #5a72fa 0%, #0084ff 100%);
+  }
+  .link-codepen {
+    background-color: #1e1f26;
+  }
+  .link-dev {
+    background-color: #0a0a0a;
+  }
+  .link-discord {
+    background-color: #7289da;
+  }
+  .link-dribbble {
+    background-color: #ea4c89;
+  }
+  .link-facebook {
+    background-color: #1877f2;
+  }
+  .link-flickr {
+    background-color: #ff0184;
+  }
+  .link-foursquare {
+    background-color: #0732a2;
+  }
+  .link-github {
+    background-color: #333;
+  }
+  .link-gitlab {
+    background-color: #554488;
+  }
+  .link-google {
+    background-color: #4285f4;
+  }
+  .link-instagram {
+    background-color: #c13584;
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  }
+  .link-keybase {
+    background-color: #33a0ff;
+  }
+  .link-kickstarter {
+    @apply text-neutral-900;
+    background-color: #06ce78;
+  }
+  .link-lastfm {
+    background-color: #d51007;
+  }
+  .link-linkedin {
+    background-color: #0077b5;
+  }
+  .link-mastodon {
+    background-color: #6364ff;
+  }
+  .link-medium {
+    background-color: #00ab6c;
+  }
+  .link-microsoft {
+    background-color: #08a6f0;
+  }
+  .link-orcid {
+    background-color: #a6ce39;
+  }
+  .link-patreon {
+    background-color: #ff434d;
+  }
+  .link-pinterest {
+    background-color: #e60023;
+  }
+  .link-reddit {
+    background-color: #ff4500;
+  }
+  .link-researchgate {
+    background-color: #40ba9c;
+  }
+  .link-slack {
+    background-color: #4a154b;
+  }
+  .link-snapchat {
+    @apply text-neutral-900;
+    background-color: #fffc00;
+  }
+  .link-soundcloud {
+    background-color: #ff8800;
+    background: linear-gradient(120deg, #ff8800, #ff3300);
+  }
+  .link-spotify {
+    background-color: #1db954;
+  }
+  .link-steam {
+    background-color: #000;
+  }
+  .link-telegram {
+    background-color: #25a3e1;
+  }
+  .link-threads {
+    background-color: #000;
+  }
+  .link-tiktok {
+    background-color: #fe2d55;
+  }
+  .link-tumblr {
+    background-color: #001935;
+  }
+  .link-twitch {
+    background-color: #9146ff;
+  }
+  .link-twitter {
+    background-color: rgb(63, 136, 222);
+  }
+  .link-whatsapp {
+    background-color: #45d82c;
+    background: linear-gradient(120deg, #12990b, #45d82c);
+  }
+  .link-x {
+    background-color: #000;
+  }
+  .link-youtube {
+    background-color: #ff0000;
+  }
+  .link-stack-exchange {
+    background-color: #0095ff;
+  }
+  .link-stack-overflow {
+    background-color: #f48024;
+  }
 
-/* -- Accessibility -- */
-/* Visually hidden, but still announced by screen readers */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
+  /* -- Accessibility -- */
+  /* Visually hidden, but still announced by screen readers */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
 
-/* Skip link: hidden until focused with the keyboard */
-.skip-link {
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  z-index: 50;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  background-color: #fff;
-  color: #111827;
-  transform: translateY(-200%);
-}
-.skip-link:focus {
-  transform: translateY(0);
-}
+  /* Skip link: hidden until focused with the keyboard */
+  .skip-link {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 50;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    color: #111827;
+    transform: translateY(-200%);
+  }
+  .skip-link:focus {
+    transform: translateY(0);
+  }
 
-/* Clearly visible keyboard focus indicator */
-a:focus-visible,
-button:focus-visible {
-  outline: 3px solid #7e22ce;
-  outline-offset: 3px;
-}
-main:focus {
-  outline: none;
-}
-@media (prefers-color-scheme: dark) {
+  /* Clearly visible keyboard focus indicator */
   a:focus-visible,
   button:focus-visible {
-    outline-color: #d8b4fe;
+    outline: 3px solid #7e22ce;
+    outline-offset: 3px;
+  }
+  main:focus {
+    outline: none;
+  }
+  @media (prefers-color-scheme: dark) {
+    a:focus-visible,
+    button:focus-visible {
+      outline-color: #d8b4fe;
+    }
+  }
+
+  /* -- Chroma Highlight -- */
+  /* Background */
+  .prose .chroma {
+    @apply rounded-md bg-neutral-50 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200;
   }
 }
-
-/* -- Chroma Highlight -- */
-/* Background */
-.prose .chroma {
-  @apply rounded-md bg-neutral-50 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200;
-}
-
-@tailwind utilities;

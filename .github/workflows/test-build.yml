@@ -1,4 +1,4 @@
-name: Test Build
+name: Build and Release
 
 permissions: {}
 
@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    name: Build Example Site
+    name: Lint and build
     permissions:
       contents: read
     runs-on: ubuntu-latest
@@ -21,11 +21,63 @@ jobs:
           submodules: true
           fetch-depth: 0
 
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn --immutable
+
+      - name: Lint
+        run: yarn lint
+
+      # Dependabot PRs get the compiled CSS rebuilt by rebuild_css.yml
+      - name: Check compiled CSS is up to date
+        if: github.event.pull_request.user.login != 'dependabot[bot]'
+        run: |
+          yarn build
+          git diff --exit-code assets/css/compiled/main.css
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78
         with:
-          hugo-version: 'latest'
+          hugo-version: '0.168.0'
 
-      - name: Build
+      - name: Build example site
         working-directory: ./exampleSite
         run: hugo --minify --themesDir ../.. --baseURL https://jpanther.github.io/lynx/
+
+  release:
+    name: Publish Release
+    needs: build
+    permissions:
+      contents: write
+      issues: write
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn --immutable
+
+      - name: Publish release to GitHub
+        env:
+          GIT_AUTHOR_NAME: Florian Imdahl
+          GIT_AUTHOR_EMAIL: git@ffflorian.de
+          GIT_COMMITTER_NAME: Florian Imdahl
+          GIT_COMMITTER_EMAIL: git@ffflorian.de
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: yarn release

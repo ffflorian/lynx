@@ -15,9 +15,14 @@ hugo.linux
 # Temporary lock file while building
 .hugo_build.lock
 
-### Congo ###
-# Lighthouse generated output
-.lighthouseci
-
 # Project specific files
 TODO
+
+# yarn
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

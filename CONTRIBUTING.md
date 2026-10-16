@@ -6,13 +6,13 @@
 
 - **Ensure the bug has not already been reported** by searching [GitHub Issues](https://github.com/ffflorian/lynx/issues). If there's already an open issue, feel free to add any extra information you might have about the issue.
 - If you're unable to find an open issue matching the problem, [open a new one](https://github.com/ffflorian/lynx/issues/new). Be sure to include a **title and clear description**, as much relevant information as possible, and a **code sample**, **screenshot**, or a **test case** demonstrating the expected behavior that is not occurring.
-- Where possible, use the bug report templates to create the issue. Avoid including descriptions like "bug", "feature", etc in the issue title as these will be handled by labels.
 
 #### Have a patch that fixes an issue?
 
 - Great! Open a new GitHub pull request with the patch.
-- All development occurs on the `dev` branch and new PRs should be forked from here.
-- The command `npm run example` can be used to test local changes using the example site.
+- All development occurs on the `main` branch and new PRs should be forked from here.
+- Install the dependencies with `yarn`. The command `yarn example` can be used to test local changes using the example site.
+- The theme's CSS is compiled with Tailwind CSS into `assets/css/compiled/main.css`, which is committed. Run `yarn dev` while working on templates or styles (or `yarn build` once) and commit the compiled file along with your changes.
 - Ensure the PR description clearly describes the problem and solution. Include the relevant issue number, if applicable.
 - **Before submitting**, check the [coding conventions](#coding-conventions) section below to learn more about coding and commit message expectations.
 
@@ -20,15 +20,15 @@
 
 #### Do you intend to add a new feature, or change an existing one?
 
-- Enhancements are welcome but before implementing any features, be sure to suggest your change by opening a [new discussion](https://github.com/ffflorian/lynx/discussions/new) about your idea. Enhancements are discussed to ensure they fit with the project's design intent and overall roadmap.
-- Before opening a discussion, [check to see](https://github.com/ffflorian/lynx/discussions/categories/ideas) if a similar idea is already being discussed.
+- Enhancements are welcome but before implementing any features, be sure to suggest your change by opening a [new issue](https://github.com/ffflorian/lynx/issues/new) about your idea. Enhancements are discussed to ensure they fit with the project's design intent and overall roadmap.
+- Before opening an issue, [check to see](https://github.com/ffflorian/lynx/issues) if a similar idea is already being discussed.
 - All ideas and suggestions are welcome and will be judged on their merits.
 - If the community supports your idea, go ahead and submit a PR with the implemented feature.
 
 ### Questions? 🙋‍♀️
 
-- If you have a general question, these should be asked using [GitHub Discussions](https://github.com/ffflorian/lynx/discussions). Feel free to open a [new discussion](https://github.com/ffflorian/lynx/discussions/new) to ask your question using the "Q&A" category.
-- Be sure to check if your question has already been answered by searching [existing Q&A discussions](https://github.com/ffflorian/lynx/discussions/categories/q-a).
+- If you have a general question, feel free to open a [new issue](https://github.com/ffflorian/lynx/issues/new).
+- Be sure to check if your question has already been answered by searching [existing issues](https://github.com/ffflorian/lynx/issues?q=is%3Aissue).
 
 ### Coding conventions
 
@@ -41,11 +41,11 @@
 - Any static text must be referenced using the `i18n` methods and included in the localisation assets.
 - Commit often, preferring incremental changes rather than bundling everything into a single, large commit.
 
-The project includes an oxfmt config (`oxfmt.config.ts`; run `npm run format`) that helps to format code in line with these guidelines.
+The project includes an oxfmt config (`oxfmt.config.ts`; run `yarn format`) that helps to format code in line with these guidelines.
 
 #### Commit message guidelines
 
-- Use [Gitmoji](https://gitmoji.dev) in commit messages to provide context.
+- Use [Conventional Commits](https://www.conventionalcommits.org) (ie. `feat: Add icon`, `fix: Center link icons`). Releases and the changelog are generated from the commit messages with [semantic-release](https://github.com/semantic-release/semantic-release): `fix` triggers a patch release, `feat` a minor release and a `BREAKING CHANGE:` footer a major release. Since Lynx is a Go module, a major release also requires adding the major version suffix to the module path in `go.mod` (ie. `github.com/ffflorian/lynx/v2`).
 - Clearly describe the change with a short summary in the first 72 characters.
 - Place more detailed explanations in paragraphs below the summary, separated by a blank line.
 - Use imperative language (ie. "Fix bug", not "Fixed bug" or "Fixes bug").
