@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    name: Build Example Site
+    name: Lint and build
     permissions:
       contents: read
     runs-on: ubuntu-latest
@@ -21,12 +21,29 @@ jobs:
           submodules: true
           fetch-depth: 0
 
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn --immutable
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Check compiled CSS is up to date
+        run: |
+          yarn build
+          git diff --exit-code assets/css/compiled/main.css
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78
         with:
-          hugo-version: 'latest'
+          hugo-version: '0.168.0'
 
-      - name: Build
+      - name: Build example site
         working-directory: ./exampleSite
         run: hugo --minify --themesDir ../.. --baseURL https://jpanther.github.io/lynx/
 
