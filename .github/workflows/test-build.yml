@@ -33,7 +33,9 @@ jobs:
       - name: Lint
         run: yarn lint
 
+      # Dependabot PRs get the compiled CSS rebuilt by rebuild_css.yml
       - name: Check compiled CSS is up to date
+        if: github.event.pull_request.user.login != 'dependabot[bot]'
         run: |
           yarn build
           git diff --exit-code assets/css/compiled/main.css

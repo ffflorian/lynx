@@ -1,0 +1,48 @@
+name: Rebuild compiled CSS
+
+permissions: {}
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'package.json'
+      - 'yarn.lock'
+
+jobs:
+  rebuild_css:
+    name: Rebuild compiled CSS
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.user.login == 'dependabot[bot]' && github.event.pull_request.head.repo.full_name == github.repository
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 26
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn --immutable
+
+      - name: Rebuild and commit compiled CSS
+        env:
+          GIT_AUTHOR_NAME: Florian Imdahl
+          GIT_AUTHOR_EMAIL: git@ffflorian.de
+          GIT_COMMITTER_NAME: Florian Imdahl
+          GIT_COMMITTER_EMAIL: git@ffflorian.de
+        run: |
+          yarn build
+          if git diff --quiet assets/css/compiled/main.css; then
+            echo "Compiled CSS is up to date."
+            exit 0
+          fi
+          git add assets/css/compiled/main.css
+          git commit -m "chore: Rebuild compiled CSS"
+          git push
