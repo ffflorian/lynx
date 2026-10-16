@@ -9,6 +9,11 @@ updates:
       exclude:
         - '@ffflorian/*'
     directory: /
+    groups:
+      tailwindcss:
+        patterns:
+          - tailwindcss
+          - '@tailwindcss/*'
     ignore:
       - dependency-name: '@types/node'
         update-types:

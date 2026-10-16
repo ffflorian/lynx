@@ -6,7 +6,6 @@
     "dev": "tailwindcss -i ./assets/css/main.css -o ./assets/css/compiled/main.css --watch",
     "build": "tailwindcss -i ./assets/css/main.css -o ./assets/css/compiled/main.css",
     "example": "hugo server --source exampleSite --themesDir ../.. --buildDrafts -b http://localhost/lynx/ -p 8008",
-    "lighthouse": "lhci autorun",
     "format": "oxfmt .",
     "release": "semantic-release",
     "lint": "yarn format --check"
@@ -34,10 +33,10 @@
     "@semantic-release/changelog": "7.0.0",
     "@semantic-release/git": "11.0.1",
     "@tailwindcss/cli": "4.3.3",
-    "@tailwindcss/typography": "^0.5.20",
+    "@tailwindcss/typography": "0.5.20",
     "oxfmt": "0.72.0",
     "semantic-release": "25.0.9",
-    "tailwindcss": "^4.3.3"
+    "tailwindcss": "4.3.3"
   },
   "packageManager": "yarn@4.18.1"
 }
