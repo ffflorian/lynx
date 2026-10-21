@@ -5,7 +5,7 @@ version: 'v0.0.3'
 workflows:
     '.github/workflows/force_release.yml':
         - 'actions/checkout@v7.0.1'
-        - 'ffflorian/actions@v1.30.11'
+        - 'ffflorian/actions@v1.30.12'
     '.github/workflows/rebuild_css.yml':
         - 'actions/checkout@v7.0.1'
         - 'actions/setup-node@v7.1.0'
@@ -15,9 +15,9 @@ workflows:
         - 'peaceiris/actions-hugo@v3.2.1'
     '.github/workflows/yarn_update.yml':
         - 'actions/checkout@v7.0.1'
-        - 'ffflorian/actions@v1.30.11'
+        - 'ffflorian/actions@v1.30.12'
 dependencies:
-    'actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd':
+    'actions/checkout@v6.0.2':
         ref: 'v6.0.2'
         commit: 'sha1-de0fac2e4500dabe0009e67214ff5f5447ce83dd'
         owner_id: 44036562
@@ -27,7 +27,7 @@ dependencies:
         commit: 'sha1-3d3c42e5aac5ba805825da76410c181273ba90b1'
         owner_id: 44036562
         repo_id: 197814629
-    'actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e':
+    'actions/setup-node@v6.4.0':
         ref: 'v6.4.0'
         commit: 'sha1-48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e'
         owner_id: 44036562
@@ -37,14 +37,14 @@ dependencies:
         commit: 'sha1-949feb2413d6458794dcd2491c4babbbce0c15c1'
         owner_id: 44036562
         repo_id: 189476904
-    'ffflorian/actions@v1.30.11':
-        ref: 'v1.30.11'
-        commit: 'sha1-8b90b42e4d82d2d73c873e8cb10d04beb8647fde'
+    'ffflorian/actions@v1.30.12':
+        ref: 'v1.30.12'
+        commit: 'sha1-f8070e5f9170b13093aca954db7070e8e241355a'
         owner_id: 5497598
         repo_id: 1197109163
         uses:
-            - 'actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd'
-            - 'actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e'
+            - 'actions/checkout@v6.0.2'
+            - 'actions/setup-node@v6.4.0'
     'peaceiris/actions-hugo@v3.2.1':
         ref: 'v3.2.1'
         commit: 'sha1-2752ce1d29631191ea3f27c23495fa06139a5b78'
