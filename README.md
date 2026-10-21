@@ -67,9 +67,9 @@ Use `imageAlt` to describe the author image for screen reader users. When it is 
 
 ```toml
 [params.author]
-  name = "Jane Doe"
-  image = "img/author.jpg"
-  imageAlt = "Jane Doe smiling in front of a bookshelf"
+name = "Jane Doe"
+image = "img/author.jpg"
+imageAlt = "Jane Doe smiling in front of a bookshelf"
 ```
 
 Links can either be a simple string containing the URL for the link, or an object that defines the link parameters. Links are displayed in the order provided in the config file.
