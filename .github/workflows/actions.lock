@@ -5,7 +5,7 @@ version: 'v0.0.3'
 workflows:
     '.github/workflows/force_release.yml':
         - 'actions/checkout@v7.0.1'
-        - 'ffflorian/actions@v1.30.13'
+        - 'ffflorian/actions@v1.30.14'
     '.github/workflows/rebuild_css.yml':
         - 'actions/checkout@v7.0.1'
         - 'actions/setup-node@v7.1.0'
@@ -15,7 +15,7 @@ workflows:
         - 'peaceiris/actions-hugo@v3.2.1'
     '.github/workflows/yarn_update.yml':
         - 'actions/checkout@v7.0.1'
-        - 'ffflorian/actions@v1.30.13'
+        - 'ffflorian/actions@v1.30.14'
 dependencies:
     'actions/checkout@v6.0.2':
         ref: 'v6.0.2'
@@ -37,9 +37,9 @@ dependencies:
         commit: 'sha1-949feb2413d6458794dcd2491c4babbbce0c15c1'
         owner_id: 44036562
         repo_id: 189476904
-    'ffflorian/actions@v1.30.13':
-        ref: 'v1.30.13'
-        commit: 'sha1-3796dc52f1fbd954f973a1147902aac38352973c'
+    'ffflorian/actions@v1.30.14':
+        ref: 'v1.30.14'
+        commit: 'sha1-83b8d7dce00aa38dea675be1e8174b5d46aae343'
         owner_id: 5497598
         repo_id: 1197109163
         uses:
