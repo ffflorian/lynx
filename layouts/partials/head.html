@@ -5,18 +5,10 @@
   {{ end }}
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  {{/* Apply the stored theme before the page renders to avoid a flash of the wrong theme */}}
+  {{/* Dark mode toggle: loaded synchronously so the stored theme is applied before the page renders */}}
   {{ if ne .Site.Params.darkModeToggle false }}
-    <script>
-      (function () {
-        try {
-          const theme = localStorage.getItem('theme');
-          if (theme === 'dark' || theme === 'light') {
-            document.documentElement.setAttribute('data-theme', theme);
-          }
-        } catch (e) {}
-      })();
-    </script>
+    {{ $themeToggleJS := resources.Get "js/theme-toggle.js" | resources.Minify | resources.Fingerprint "sha512" }}
+    <script src="{{ $themeToggleJS.RelPermalink }}" integrity="{{ $themeToggleJS.Data.Integrity }}"></script>
   {{ end }}
   {{/* Title */}}
   {{ if .IsHome -}}
