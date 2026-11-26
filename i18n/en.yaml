@@ -52,6 +52,7 @@ footer:
   powered_by: 'Powered by {{ .Hugo }} &amp; {{ .Lynx }}'
 
 a11y:
+  dark_mode: Dark mode
   breadcrumb: Breadcrumb
   links: Links
   new_tab: opens in a new tab

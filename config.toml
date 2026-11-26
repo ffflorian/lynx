@@ -7,6 +7,9 @@ title = "Lynx"
 enableEmoji = true
 disableKinds = ["taxonomy", "term"]
 
+[params]
+# darkModeToggle = true  # show a button to switch between light and dark mode
+
 [params.author]
 # name = "Your name here"
 # headline = "An awesome person"

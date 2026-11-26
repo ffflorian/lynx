@@ -13,7 +13,7 @@ Lynx is designed to be a simple links page powered by [Hugo](https://gohugo.io).
 ## Features
 
 - Fully responsive layout built with Tailwind CSS 4
-- Dark mode (auto-switching based upon browser)
+- Dark mode (auto-switching based upon browser, with a toggle to switch it on and off)
 - SVG icons from FontAwesome 5
 - HTML and Emoji support
 - Fathom Analytics and Google Analytics support
@@ -96,6 +96,13 @@ links = {
    # Custom link
    { github = { href = "https://github.com/ffflorian/lynx", text = "GitHub Project" } }
 }
+```
+
+Dark mode follows the visitor's system preference by default. A toggle button in the top right corner lets visitors switch dark mode on and off; their choice is remembered in the browser. To hide the toggle, set `darkModeToggle = false`:
+
+```toml
+[params]
+darkModeToggle = false
 ```
 
 Additional page content can be provided by creating a Markdown file at `content/_index.md`. The contents of this file will be displayed between the title and links. Check out the exampleSite to see this in practice.

@@ -50,6 +50,7 @@ footer:
   powered_by: 'Propulsé par {{ .Hugo }} &amp; {{ .Lynx }}'
 
 a11y:
+  dark_mode: Mode sombre
   breadcrumb: Fil d’Ariane
   links: Liens
   new_tab: s’ouvre dans un nouvel onglet
