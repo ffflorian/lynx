@@ -1,3 +1,9 @@
+## [1.6.2](https://github.com/ffflorian/lynx/compare/v1.6.1...v1.6.2) (2026-11-26)
+
+### Bug Fixes
+
+* Use external scripts ([#49](https://github.com/ffflorian/lynx/issues/49)) ([cbd1069](https://github.com/ffflorian/lynx/commit/cbd1069e3b89aa1ec68436d73a95fd62bca91b00))
+
 ## [1.6.1](https://github.com/ffflorian/lynx/compare/v1.6.0...v1.6.1) (2026-11-26)
 
 ### Bug Fixes
