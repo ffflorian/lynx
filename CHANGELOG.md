@@ -1,3 +1,13 @@
+## [1.6.1](https://github.com/ffflorian/lynx/compare/v1.6.0...v1.6.1) (2026-11-26)
+
+### Bug Fixes
+
+* Re-export release config ([#48](https://github.com/ffflorian/lynx/issues/48)) ([36d27ab](https://github.com/ffflorian/lynx/commit/36d27abe276987566a323f19fdebb57cf2e2fdf3))
+
+### Miscellaneous Chores
+
+* Add GitHub Pages preview and update readme ([#47](https://github.com/ffflorian/lynx/issues/47)) ([0aaa52f](https://github.com/ffflorian/lynx/commit/0aaa52f9adc08906d1bd6188bc8ed78cf8a8682c))
+
 # [1.6.0](https://github.com/ffflorian/lynx/compare/v1.5.0...v1.6.0) (2026-11-26)
 
 ### Features
