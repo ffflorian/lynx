@@ -1,3 +1,11 @@
+# [1.6.0](https://github.com/ffflorian/lynx/compare/v1.5.0...v1.6.0) (2026-11-26)
+
+### Features
+
+* Add dark/light mode ([#46](https://github.com/ffflorian/lynx/issues/46)) ([1a611d4](https://github.com/ffflorian/lynx/commit/1a611d47496c93672dff566ad907387a2fa24647))
+
+
+
 # [1.5.0](https://github.com/ffflorian/lynx/compare/v1.4.0...v1.5.0) (2026-10-16)
 
 
