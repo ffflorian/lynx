@@ -47,7 +47,7 @@ jobs:
 
       - name: Build example site
         working-directory: ./exampleSite
-        run: hugo --minify --themesDir ../.. --baseURL https://jpanther.github.io/lynx/
+        run: hugo --minify --themesDir ../.. --baseURL https://ffflorian.github.io/lynx/
 
   release:
     name: Publish Release
