@@ -6,18 +6,19 @@ This is a fork of the original [Lynx](https://github.com/jpanther/lynx) theme, f
 
 Lynx is designed to be a simple links page powered by [Hugo](https://gohugo.io). It's built using Tailwind CSS and inspired by services like LinkTree.
 
-🐛 [Bug reports & issues](https://github.com/ffflorian/lynx/issues) 💡 [Questions & feature requests](https://github.com/ffflorian/lynx/issues)
+🔗 [Live preview](https://ffflorian.github.io/lynx/) 🐛 [Bug reports & issues](https://github.com/ffflorian/lynx/issues) 💡 [Questions & feature requests](https://github.com/ffflorian/lynx/issues)
 
 ![Screenshot](./images/screenshot.png)
 
 ## Features
 
 - Fully responsive layout built with Tailwind CSS 4
-- Dark mode (auto-switching based upon browser, with a toggle to switch it on and off)
-- SVG icons from FontAwesome 5
+- Dark mode that follows the system preference, with a toggle that lets visitors switch it on and off (optional)
+- 40+ built-in link styles with SVG icons from FontAwesome 5, plus support for custom icons and link styles
 - HTML and Emoji support
 - Fathom Analytics and Google Analytics support
 - Favicons support
+- Translations (English and French)
 - Accessible to screen reader users: alt texts, skip link, list semantics, new-tab announcements and visible keyboard focus
 
 ---
