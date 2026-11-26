@@ -5,6 +5,19 @@
   {{ end }}
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  {{/* Apply the stored theme before the page renders to avoid a flash of the wrong theme */}}
+  {{ if ne .Site.Params.darkModeToggle false }}
+    <script>
+      (function () {
+        try {
+          const theme = localStorage.getItem('theme');
+          if (theme === 'dark' || theme === 'light') {
+            document.documentElement.setAttribute('data-theme', theme);
+          }
+        } catch (e) {}
+      })();
+    </script>
+  {{ end }}
   {{/* Title */}}
   {{ if .IsHome -}}
     <title>{{ .Site.Title }}</title>

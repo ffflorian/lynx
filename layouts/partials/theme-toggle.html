@@ -1,0 +1,75 @@
+{{/* Dark mode toggle. Hidden until the script below enables it, so it never shows up without JavaScript. */}}
+<div class="absolute top-4 right-4 sm:top-6 sm:right-6">
+  <button
+    id="theme-toggle"
+    class="theme-toggle"
+    type="button"
+    aria-label="{{ i18n "a11y.dark_mode" }}"
+    aria-pressed="false"
+    title="{{ i18n "a11y.dark_mode" }}"
+    hidden
+  >
+    {{/* Moon: shown in light mode */}}
+    <svg
+      class="dark:hidden"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
+    {{/* Sun: shown in dark mode */}}
+    <svg
+      class="hidden dark:block"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <circle cx="12" cy="12" r="4" />
+      <path
+        d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+      />
+    </svg>
+  </button>
+</div>
+<script>
+  (function () {
+    const root = document.documentElement;
+    const button = document.getElementById('theme-toggle');
+    const media = window.matchMedia('(prefers-color-scheme: dark)');
+
+    function isDark() {
+      const theme = root.getAttribute('data-theme');
+      return theme ? theme === 'dark' : media.matches;
+    }
+
+    function sync() {
+      button.setAttribute('aria-pressed', String(isDark()));
+    }
+
+    button.addEventListener('click', function () {
+      const theme = isDark() ? 'light' : 'dark';
+      root.setAttribute('data-theme', theme);
+      try {
+        localStorage.setItem('theme', theme);
+      } catch (e) {}
+      sync();
+    });
+
+    media.addEventListener('change', sync);
+    button.hidden = false;
+    sync();
+  })();
+</script>
